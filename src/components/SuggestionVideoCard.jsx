@@ -32,22 +32,20 @@ const SuggestionVideoCard = ({ video }) => {
             {video?.title}
           </span>
         </Link>
-        <Link to={`/channel/${video?.author?.channelId}`}>
-          <span
-            className={`text-[12px] lg:text-[10px] xl:text-[12px] font-semibold mt-1  flex items-center ${
-              mode === "dark" ? "text-white/[0.7]" : "text-gray-600"
-            }`}
-          >
-            {video?.author?.title}
-            {video?.author?.badges[0]?.type === "VERIFIED_CHANNEL" && (
-              <BsFillCheckCircleFill
-                className={` text-[12px] lg:text-[10px] xl:text-[12px] ml-2 lg:ml-1" ${
-                  mode === "dark" ? "text-white/[0.5]" : "text-gray-600"
-                }`}
-              />
-            )}
-          </span>
-        </Link>
+        <span
+          className={`text-[12px] lg:text-[10px] xl:text-[12px] font-semibold mt-1  flex items-center ${
+            mode === "dark" ? "text-white/[0.7]" : "text-gray-600"
+          }`}
+        >
+          {video?.author?.title}
+          {video?.author?.badges[0]?.type === "VERIFIED_CHANNEL" && (
+            <BsFillCheckCircleFill
+              className={` text-[12px] lg:text-[10px] xl:text-[12px] ml-2 lg:ml-1" ${
+                mode === "dark" ? "text-white/[0.5]" : "text-gray-600"
+              }`}
+            />
+          )}
+        </span>
         <div
           className={`flex text-[12px] lg:text-[10px] xl:text-[12px] font-semibold truncate overflow-hidden ${
             mode === "dark" ? "text-white/[0.7]" : "text-gray-600"
